@@ -42,13 +42,17 @@ public class BancoBrasil {
        contaBancaria1.conta = scan.next();
        System.out.println("Digite o proprietario :");
        contaBancaria1.proprietario = scan.next();
-       System.out.println("Digite o saldo inicial :");
-       contaBancaria1.saldo = scan.nextDouble();
+       System.out.println("Digite o valor de deposito :");
+       contaBancaria1.depositar(scan.nextDouble());
        
        System.out.println(contaBancaria1.agencia+"\n"
                 + contaBancaria1.conta+ "\n"
                 + contaBancaria1.proprietario+ "\n"
-                + contaBancaria1.saldo);
+                + contaBancaria1.consultarSaldo());
+       
+       System.out.println("Digite o valor para saque :");
+       contaBancaria1.sacar(scan.nextDouble());
+       
+       System.out.println(contaBancaria1.consultarSaldo());
     }
-    
 }
