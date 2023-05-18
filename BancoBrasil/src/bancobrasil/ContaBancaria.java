@@ -28,8 +28,15 @@ public class ContaBancaria {
         }   
     }
     
-    void transferir(){
+    void transferir(ContaBancaria contabancaria, double valor){
+        if(valor<=this.saldo){
+            this.sacar(valor);
+            contabancaria.saldo += valor;
+        }else{
+            System.out.println("O valor disponivel na conta é insuficiente !");
+        }
         
+            
     }
     
     String consultarSaldo(){
