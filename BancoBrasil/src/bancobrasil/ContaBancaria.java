@@ -14,7 +14,7 @@ public class ContaBancaria {
     String agencia;
     String conta;
     double saldo;
-    String proprietario;
+    Usuario proprietario;
     //Metodos(Comportamentos) da classe
     void depositar(double valor){
         this.saldo += valor;
@@ -25,8 +25,7 @@ public class ContaBancaria {
             System.out.println("O valor disponivel na conta é insuficiente !");
         }else{
             this.saldo -= valor;
-        }
-        
+        }   
     }
     
     void transferir(){

@@ -21,6 +21,7 @@ public class BancoBrasil {
         //variavel contaBancaria1 e contaBancaria2
        ContaBancaria contaBancaria1 = new ContaBancaria();
        ContaBancaria contaBancaria2 = new ContaBancaria();
+       Usuario user1 = new Usuario();
        /*Atribuindo valores ao nosso Objeto
        contaBancaria1.agencia = "0001";
        contaBancaria1.conta = "12345";
@@ -40,14 +41,21 @@ public class BancoBrasil {
        contaBancaria1.agencia = scan.next();
        System.out.println("Digite a conta :");
        contaBancaria1.conta = scan.next();
-       System.out.println("Digite o proprietario :");
-       contaBancaria1.proprietario = scan.next();
+       //Construção e inserção de dados do usuário.
+       System.out.println("Dados do Usuário");
+       System.out.println("Digite o nome do cliente :");
+       user1.nome = scan.next();
+       System.out.println("Digite o sobrenome do cliente :");
+       user1.sobrenome = scan.next();
+       System.out.println("Digite o telefone do cliente :");
+       user1.telefone = scan.next();
+       contaBancaria1.proprietario = user1;
        System.out.println("Digite o valor de deposito :");
        contaBancaria1.depositar(scan.nextDouble());
        
        System.out.println(contaBancaria1.agencia+"\n"
                 + contaBancaria1.conta+ "\n"
-                + contaBancaria1.proprietario+ "\n"
+                + contaBancaria1.proprietario.imprimirInfo()+ "\n"
                 + contaBancaria1.consultarSaldo());
        
        System.out.println("Digite o valor para saque :");
