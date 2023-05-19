@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package bancobrasil;
 
 /**
  *
- * @Rodrigo Lima
+ * @RodrigoLima
  */
 public class ContaBancaria {
     //Atributos da Classe
@@ -15,6 +11,48 @@ public class ContaBancaria {
     String conta;
     double saldo;
     Usuario proprietario;
+    //Construtores
+    public ContaBancaria(){};
+
+    public ContaBancaria(String agencia, String conta, double saldo, Usuario proprietario){
+        this.agencia = agencia;
+        this.conta = conta;
+        this.saldo = saldo;
+        this.proprietario = proprietario;
+    } 
+    //Get e Set
+    public String getAgencia(){
+        return agencia;
+    }
+
+    public String getConta(){
+        return conta;
+    }
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public Usuario getProprietario(){
+        return proprietario;
+    }
+
+    public void setAgencia(String agencia){
+        this.agencia = agencia;
+    }
+
+    public void setConta(String conta){
+        this.conta = conta;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+
+    public void setProprietario(Usuario proprietario){
+        this.proprietario = proprietario;
+    }
+
     //Metodos(Comportamentos) da classe
     void depositar(double valor){
         this.saldo += valor;
